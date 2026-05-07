@@ -11,7 +11,7 @@ A production-style implementation of the Cloud Resume Challenge on AWS, deployed
 
 ## Repository Layout
 
-\`\`\`
+```
 .
 ├── .github/workflows/   # CI/CD pipeline definitions
 ├── bootstrap/           # One-time setup: state backend + GitHub OIDC role (local state)
@@ -24,7 +24,7 @@ A production-style implementation of the Cloud Resume Challenge on AWS, deployed
 │       └── prod/
 ├── frontend/            # Static site assets
 └── lambda/              # Lambda function source
-\`\`\`
+```
 
 ## Pipeline Flow
 
