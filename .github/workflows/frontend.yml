@@ -53,16 +53,23 @@ jobs:
               --query Parameter.Value --output text 2>/dev/null) && \
             DIST_ID=$(aws ssm get-parameter \
               --name /cloud-resume-challenge/dev/static-site/distribution-id \
+              --query Parameter.Value --output text 2>/dev/null) && \
+            API_URL=$(aws ssm get-parameter \
+              --name /cloud-resume-challenge/dev/visitor-counter/api-endpoint \
               --query Parameter.Value --output text 2>/dev/null) && break
             echo "SSM params not ready yet, waiting 30s (attempt $i/20)..."
             sleep 30
           done
-          if [[ -z "$BUCKET" || -z "$DIST_ID" ]]; then
+          if [[ -z "$BUCKET" || -z "$DIST_ID" || -z "$API_URL" ]]; then
             echo "SSM params not found after 10 minutes. Has the terraform apply completed?"
             exit 1
           fi
           echo "bucket=$BUCKET" >> "$GITHUB_OUTPUT"
           echo "distribution_id=$DIST_ID" >> "$GITHUB_OUTPUT"
+          echo "api_url=$API_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Inject API endpoint into script
+        run: sed -i "s|VISITOR_COUNTER_API_URL|${{ steps.config.outputs.api_url }}|g" frontend/script.js
 
       - name: Sync to S3
         run: |
@@ -99,8 +106,15 @@ jobs:
           DIST_ID=$(aws ssm get-parameter \
             --name /cloud-resume-challenge/prod/static-site/distribution-id \
             --query Parameter.Value --output text)
+          API_URL=$(aws ssm get-parameter \
+            --name /cloud-resume-challenge/prod/visitor-counter/api-endpoint \
+            --query Parameter.Value --output text)
           echo "bucket=$BUCKET" >> "$GITHUB_OUTPUT"
           echo "distribution_id=$DIST_ID" >> "$GITHUB_OUTPUT"
+          echo "api_url=$API_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Inject API endpoint into script
+        run: sed -i "s|VISITOR_COUNTER_API_URL|${{ steps.config.outputs.api_url }}|g" frontend/script.js
 
       - name: Sync to S3
         run: |
