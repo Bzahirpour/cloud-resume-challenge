@@ -91,7 +91,6 @@ data "archive_file" "db_update_fn" {
   type        = "zip"
   source_file = "${path.module}/../../../lambda/db_update_fn.py"
   output_path = "${path.module}/../../../lambda/db_update_fn.zip"
-  version     = filemd5("${path.module}/../../../lambda/db_update_fn.py")
 }
 
 # Lambda function
