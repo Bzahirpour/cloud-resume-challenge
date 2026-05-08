@@ -2,7 +2,7 @@
 // Cloud Resume v3 — script.js
 // ─────────────────────────────────────────────────────────────
 
-const API_ENDPOINT = 'https://YOUR_API_GATEWAY_URL/prod/counter';
+const API_ENDPOINT = 'VISITOR_COUNTER_API_URL';
 
 // ── 1. Scroll Reveal ─────────────────────────────────────────
 // Root: null (viewport) — this is a standard-scroll page, not a pane
@@ -173,10 +173,10 @@ async function updateVisitorCount() {
   const el = document.getElementById('visitor-count');
   if (!el) return;
   try {
-    const response = await fetch(API_ENDPOINT);
+    const response = await fetch(API_ENDPOINT, { method: 'POST' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    el.textContent = data.body;
+    el.textContent = data.count;
   } catch {
     el.textContent = '\u2014';
   }
