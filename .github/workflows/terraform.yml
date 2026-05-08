@@ -87,7 +87,7 @@ jobs:
         id: plan
         working-directory: infra/envs/${{ matrix.environment }}
         run: |
-          terraform plan -no-color -out=tfplan
+          terraform plan -no-color -out=tfplan -lock-timeout=120s
           {
             echo 'PLAN<<EOF'
             terraform show -no-color tfplan
