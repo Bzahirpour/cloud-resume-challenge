@@ -1,14 +1,14 @@
 output "website_url" {
   description = "CloudFront distribution URL"
-  value       = module.static_site.website_url
+  value       = "https://${aws_cloudfront_distribution.s3_distribution.domain_name}"
 }
 
 output "bucket_name" {
   description = "S3 bucket name for frontend file sync"
-  value       = module.static_site.bucket_name
+  value       = aws_s3_bucket.crc_static_site.id
 }
 
 output "distribution_id" {
   description = "CloudFront distribution ID for cache invalidation"
-  value       = module.static_site.distribution_id
+  value       = aws_cloudfront_distribution.s3_distribution.id
 }
