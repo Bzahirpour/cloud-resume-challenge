@@ -87,6 +87,7 @@ data "archive_file" "db_update_fn" {
   type        = "zip"
   source_file = "${path.module}/../../../lambda/db_update_fn.py"
   output_path = "${path.module}/../../../lambda/db_update_fn.zip"
+  version     = filemd5("${path.module}/../../../lambda/db_update_fn.py")
 }
 
 # Lambda function
@@ -96,7 +97,7 @@ resource "aws_lambda_function" "db_update_fn" {
   role                           = aws_iam_role.db_update_lambda_role.arn
   handler                        = "db_update_fn.lambda_handler" # The handler is the entry point for the Lambda function, in the format "file_name.function_name"
   code_sha256                    = data.archive_file.db_update_fn.output_base64sha256
-  runtime                        = "python3.14"
+  runtime                        = "python3.12"
   reserved_concurrent_executions = 5
 
   depends_on = [aws_cloudwatch_log_group.db_update_fn]
