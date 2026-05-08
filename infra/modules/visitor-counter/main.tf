@@ -91,12 +91,12 @@ data "archive_file" "db_update_fn" {
 
 # Lambda function
 resource "aws_lambda_function" "db_update_fn" {
-  filename      = data.archive_file.db_update_fn.output_path
-  function_name = "${var.project_name}-${var.environment}-db_update_fn"
-  role          = aws_iam_role.db_update_lambda_role.arn
-  handler       = "db_update_fn.lambda_handler" # The handler is the entry point for the Lambda function, in the format "file_name.function_name"
-  code_sha256   = data.archive_file.db_update_fn.output_base64sha256
-  runtime       = "python3.14"
+  filename                       = data.archive_file.db_update_fn.output_path
+  function_name                  = "${var.project_name}-${var.environment}-db_update_fn"
+  role                           = aws_iam_role.db_update_lambda_role.arn
+  handler                        = "db_update_fn.lambda_handler" # The handler is the entry point for the Lambda function, in the format "file_name.function_name"
+  code_sha256                    = data.archive_file.db_update_fn.output_base64sha256
+  runtime                        = "python3.14"
   reserved_concurrent_executions = 5
 
   depends_on = [aws_cloudwatch_log_group.db_update_fn]
@@ -127,9 +127,9 @@ resource "aws_apigatewayv2_api" "visitor_count_api" {
 }
 
 resource "aws_apigatewayv2_integration" "lambda_integration" {
-  api_id           = aws_apigatewayv2_api.visitor_count_api.id
-  integration_type = "AWS_PROXY"
-  integration_uri  = aws_lambda_function.db_update_fn.invoke_arn
+  api_id                 = aws_apigatewayv2_api.visitor_count_api.id
+  integration_type       = "AWS_PROXY"
+  integration_uri        = aws_lambda_function.db_update_fn.invoke_arn
   payload_format_version = "2.0"
 }
 
