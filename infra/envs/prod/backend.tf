@@ -8,7 +8,7 @@ terraform {
   }
   backend "s3" {
     bucket       = "cloud-resume-challenge-tfstate-453624448159"
-    key          = "envs/dev/terraform.tfstate"
+    key          = "envs/prod/terraform.tfstate"
     region       = "us-east-1"
     encrypt      = true
     use_lockfile = true
