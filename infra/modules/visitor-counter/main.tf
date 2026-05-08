@@ -112,7 +112,7 @@ resource "aws_lambda_function" "db_update_fn" {
 }
 
 resource "aws_cloudwatch_log_group" "db_update_fn" {
-  name              = "/aws/lambda/${aws_lambda_function.db_update_fn.function_name}"
+  name              = "/aws/lambda/${var.project_name}-${var.environment}-db_update_fn"
   retention_in_days = 14
 }
 
