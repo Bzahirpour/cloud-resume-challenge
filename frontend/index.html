@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ben Z. — Cloud &amp; Network Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ─── Navbar ─────────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#hero" class="navbar__logo">BZ</a>
+      <ul class="navbar__links">
+        <li><a href="#about"      class="navbar__link">About</a></li>
+        <li><a href="#skills"     class="navbar__link">Skills</a></li>
+        <li><a href="#experience" class="navbar__link">Experience</a></li>
+        <li><a href="#projects"   class="navbar__link">Projects</a></li>
+      </ul>
+      <a href="https://www.linkedin.com/in/benjaminzimmerman1/" target="_blank" rel="noopener" class="btn btn--outline navbar__cta">
+        LinkedIn <span class="btn__arrow">↗</span>
+      </a>
+      <button class="navbar__hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile drawer -->
+    <div class="navbar__drawer" aria-hidden="true">
+      <ul>
+        <li><a href="#about"      class="navbar__link">About</a></li>
+        <li><a href="#skills"     class="navbar__link">Skills</a></li>
+        <li><a href="#experience" class="navbar__link">Experience</a></li>
+        <li><a href="#projects"   class="navbar__link">Projects</a></li>
+        <li><a href="https://www.linkedin.com/in/benjaminzimmerman1/" target="_blank" rel="noopener" class="navbar__link">LinkedIn ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ──────────────────────────────────────────────── -->
+  <section id="hero" class="hero">
+    <div class="container hero__inner">
+
+      <!-- Photo frame (centered, stacked above text) -->
+      <div class="hero__photo-wrap">
+        <!-- Colored card behind photo (à la nateherk) -->
+        <div class="hero__photo-bg" aria-hidden="true"></div>
+        <div class="hero__photo-frame">
+          <img src="headshot.png" alt="Ben Z." class="hero__photo" />
+          <!-- Placeholder shown when photo.jpg is absent -->
+          <div class="hero__photo-placeholder" aria-hidden="true">BZ</div>
+        </div>
+        <!-- Floating cert badge -->
+        <div class="hero__cert-badge">
+          <span class="hero__cert-count">13+</span>
+          <span class="hero__cert-label">AWS &amp; Industry Certs</span>
+        </div>
+      </div>
+
+      <!-- Text block (centered below photo) -->
+      <div class="hero__text">
+        <p class="hero__eyebrow">— BEN Z. —</p>
+
+        <!--
+          Headline options — uncomment preferred, comment out the rest:
+          Option 1 (DEFAULT): establishes the transition story immediately
+          Option 2: emphasises drive over pedigree
+          Option 3: bold personal brand positioning
+          Option 4: technical / hybrid angle
+        -->
+        <!-- Option 1: --> <h1 class="hero__headline">On&#8209;Prem<br>to Cloud.</h1>
+        <!-- Option 2: <h1 class="hero__headline">Built From the<br>Ground Up.</h1> -->
+        <!-- Option 3: <h1 class="hero__headline">Infrastructure Engineer.<br>Built Different.</h1> -->
+        <!-- Option 4: <h1 class="hero__headline">Where Networks<br>Meet the Cloud.</h1> -->
+
+        <p class="hero__sub">
+          Cloud &amp; network engineer bridging enterprise
+          infrastructure and AWS-native architecture.
+        </p>
+
+        <div class="hero__actions">
+          <a href="https://www.linkedin.com/in/benjaminzimmerman1/" target="_blank" rel="noopener" class="btn btn--primary">
+            LinkedIn <span class="btn__arrow">↗</span>
+          </a>
+          <a href="https://github.com/benzimmerman" target="_blank" rel="noopener" class="btn btn--ghost">
+            GitHub <span class="btn__arrow">↗</span>
+          </a>
+        </div>
+
+        <!-- Stats row -->
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-value">13+</span>
+            <span class="hero__stat-label">Certifications</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">10 Yrs</span>
+            <span class="hero__stat-label">Infrastructure Experience</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">1</span>
+            <span class="hero__stat-label">NOC Built from Zero</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── Cert Strip ─────────────────────────────────────────── -->
+  <div class="cert-strip" aria-label="Certified by">
+    <div class="cert-strip__label">· CERTIFIED BY</div>
+    <div class="cert-strip__track-wrap">
+      <div class="cert-strip__track">
+        <!-- List is duplicated so the marquee loops seamlessly -->
+
+        <!-- AWS -->
+        <span class="cert-chip cert-chip--aws" role="img" aria-label="Amazon Web Services">
+          <svg class="cert-logo" viewBox="0 0 72 30" fill="none" aria-hidden="true">
+            <text x="1" y="20" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="900" font-size="21" fill="#FF9900" letter-spacing="-0.5">aws</text>
+            <path d="M3 26 Q36 33 69 26" stroke="#FF9900" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <path d="M65 23 L69 26 L65 29" stroke="#FF9900" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+
+        <!-- CompTIA -->
+        <span class="cert-chip cert-chip--comptia" role="img" aria-label="CompTIA">
+          <svg class="cert-logo" viewBox="0 0 90 22" fill="none" aria-hidden="true">
+            <text x="1" y="16" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="700" font-size="15" fill="#C8102E">CompTIA</text>
+            <rect x="1" y="19" width="82" height="2" rx="1" fill="#C8102E" opacity="0.5"/>
+          </svg>
+        </span>
+
+        <!-- Cisco -->
+        <span class="cert-chip cert-chip--cisco" role="img" aria-label="Cisco">
+          <svg class="cert-logo" viewBox="0 0 56 30" fill="none" aria-hidden="true">
+            <!-- 6 vertical bars — Cisco's iconic mark -->
+            <rect x="0"  y="5"  width="5" height="9"  rx="2.5" fill="#1BA0D7"/>
+            <rect x="8"  y="2"  width="5" height="15" rx="2.5" fill="#1BA0D7"/>
+            <rect x="16" y="5"  width="5" height="9"  rx="2.5" fill="#1BA0D7"/>
+            <rect x="24" y="2"  width="5" height="15" rx="2.5" fill="#1BA0D7"/>
+            <rect x="32" y="5"  width="5" height="9"  rx="2.5" fill="#1BA0D7"/>
+            <rect x="40" y="2"  width="5" height="15" rx="2.5" fill="#1BA0D7"/>
+            <text x="1" y="29" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#1BA0D7" letter-spacing="0.8">cisco</text>
+          </svg>
+        </span>
+
+        <!-- Juniper -->
+        <span class="cert-chip cert-chip--juniper" role="img" aria-label="Juniper Networks">
+          <svg class="cert-logo" viewBox="0 0 24 24" fill="#84BD00" aria-hidden="true">
+            <path d="M23.0864 13.1643c.0456 0 .0717-.0132.0717-.062 0-.0482-.0254-.0593-.0731-.0593h-.1023v.1213zm-.1037.0417v.1285h-.0445v-.334h.1487c.0846 0 .1172.0347.1172.1006 0 .054-.0229.0912-.0806.102l.0755.1314h-.0484l-.0746-.1285zm.0746-.2918a.2535.2535 0 0 0-.2533.2531c0 .1395.1136.2532.2533.2532a.2535.2535 0 0 0 .253-.2532.2534.2534 0 0 0-.253-.2531zm-.291.2531a.2912.2912 0 0 1 .291-.2908.291.291 0 0 1 .2905.2908.291.291 0 0 1-.2905.2907.2912.2912 0 0 1-.291-.2907zm-20.7445-.6602V8.8304h-.4212v3.6767c0 .8506.0337 1.5332-1.4404 1.5332A4.029 4.029 0 0 1 0 14.0369v.397a6.215 6.215 0 0 0 .1602.0022c1.7858 0 1.8616-.8002 1.8616-1.929zm15.5404-1.6972h3.1334c-.042-.918-.1011-1.7014-1.4404-1.7014-1.2887 0-1.6425.6992-1.693 1.7014zm1.7016-2.0889c1.794 0 1.853 1.2045 1.8447 2.4764h-3.5548c.0085 1.1204.2863 1.9544 1.7436 1.9544.775 0 1.1288-.2107 1.5079-.4886l.2357.3116c-.421.3117-.918.556-1.7436.556-1.8194 0-2.1565-1.053-2.1565-2.4091 0-1.356.3877-2.4007 2.123-2.4007zm-4.1484 2.7055c.7439 0 1.1135-.3625 1.1135-1.0949 0-.7322-.3988-1.0798-1.132-1.0798h-1.7285v2.1747zM15.109 8.839c1.0678 0 1.5519.5307 1.5519 1.474 0 .9497-.478 1.527-1.5578 1.527h-1.7348v1.5981h-.4124V8.839zm-2.9253 0v4.5991h-.4122V8.839zm-1.1939 4.5991h-.4296v-2.8134c0-.8086.0084-1.491-1.474-1.491-1.4743 0-1.4405.6824-1.4405 1.5331v2.7713h-.4212v-2.7713c0-1.1288.076-1.9289 1.8616-1.9289 1.7943 0 1.9037.8001 1.9037 1.8952zM2.7466 8.8304h.4297v2.8134c0 .8088-.0084 1.491 1.474 1.491 1.4742 0 1.4405-.6822 1.4405-1.533V8.8303h.4212v2.7713c0 1.1289-.0759 1.929-1.8616 1.929-1.7943 0-1.9038-.8001-1.9038-1.8952zm18.9675 1.8364v2.7713h.421v-2.7713c0-.8507-.0336-1.533 1.4407-1.533.1579 0 .298.0083.4242.023v-.4012a4.8535 4.8535 0 0 0-.4242-.0177c-1.7859 0-1.8617.8001-1.8617 1.929z"/>
+          </svg>
+        </span>
+
+        <!-- PMI -->
+        <span class="cert-chip cert-chip--pmi" role="img" aria-label="Project Management Institute">
+          <!-- PMI icon mark: 4-quadrant logo — P letter, orange wave, blue diamond, purple triangles -->
+          <svg class="cert-logo" viewBox="0 0 63 66" fill="none" aria-hidden="true">
+            <path d="M22.493 49.002a7.5 7.5 0 0 1 7.495-7.503H30V34H0v7.499a7.499 7.499 0 0 1 7.499 7.499v.004A7.498 7.498 0 0 1 0 56.501V64h30v-7.5a7.498 7.498 0 0 1-7.507-7.49z" fill="#05bfe0"/>
+            <path d="M48 16.996C47.998 8.713 41.283 2 33 2v30c8.283 0 14.998-6.713 15-14.996C48.002 25.287 54.717 32 63 32V2c-8.283 0-14.998 6.713-15 14.996" fill="#ff610f"/>
+            <path d="M19.674 17H5.64V7.638h14.035a4.68 4.68 0 0 1 4.679 4.681A4.68 4.68 0 0 1 19.674 17zm.936-14.953A9.914 9.914 0 0 0 19.674 2H0v30h5.618v-9.362h14.056c.315 0 .625 0 .936-.047 5.667-.503 9.852-5.508 9.349-11.177A10.304 10.304 0 0 0 20.61 2.06z" fill="#231f20"/>
+            <path d="M32 64v-9l9 9zM49.621 64L33 47.376V39l25 25zM63 34v9l-9-9zM62 59L37 34h8.405L62 50.593z" fill="#4f17a8"/>
+          </svg>
+        </span>
+
+        <!-- LPI -->
+        <span class="cert-chip cert-chip--lpi" role="img" aria-label="Linux Professional Institute">
+          <svg class="cert-logo" viewBox="0 0 24 24" fill="#FFB300" aria-hidden="true">
+            <path d="M12-.0002c-6.6273 0-12 5.3728-12 11.9997 0 6.627 5.3727 12.0007 12 12.0007s12-5.3728 12-12.0007S18.627-.0002 12-.0002Zm0 20.987c-4.9632 0-8.987-4.0231-8.987-8.9866 0-4.9635 4.0238-8.9867 8.987-8.9867 4.9632 0 8.987 4.0235 8.987 8.9867 0 4.9631-4.0238 8.9867-8.987 8.9867zm5.1043-3.0031.7995-2.9975h-7.1631L13.5062 4.495h-2.9978L6.9118 17.9837Zm.2896-10.4938c0 .8225-.6697 1.4938-1.4938 1.4938s-1.4897-.6716-1.4897-1.4938c0-.8223.6675-1.4907 1.4897-1.4907s1.4938.6688 1.4938 1.4907"/>
+          </svg>
+        </span>
+
+        <!-- WGU -->
+        <span class="cert-chip cert-chip--wgu" role="img" aria-label="Western Governors University">
+          <!-- Official WGU logo: compass rose mark + W G U letterforms -->
+          <svg class="cert-logo" viewBox="0 0 133 30" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M61.9211 2.65569H54.1752C54.1752 2.65569 55.0727 3.47454 55.6407 4.33765C56.2088 5.20077 56.6932 6.08355 57.1801 7.08437L58.7563 10.2688L56.1916 15.2409L49.6973 2.65569H41.5776C41.5776 2.65569 42.4481 3.32946 43.2326 4.29831C43.9432 5.17372 44.4375 6.08355 44.9268 7.08191L49.7342 16.7311C55.5793 15.4057 61.4612 14.2278 67.3653 13.1877L61.9186 2.65569H61.9211Z" fill="#46B1EF"/>
+            <path d="M79.3065 2.65567H74.3516L69.1655 12.8778C71.0737 12.5508 72.9844 12.236 74.895 11.9385L79.3065 2.65567Z" fill="#46B1EF"/>
+            <path d="M54.7015 26.6975C54.7015 26.6975 54.7851 26.7712 55.0285 26.9483C55.272 27.1253 55.4171 27.209 55.4171 27.209L59.9958 17.5868C56.9835 17.9655 53.9195 18.4155 50.8384 18.9417L54.7039 26.6975H54.7015Z" fill="#002855"/>
+            <path d="M66.8882 26.6999C66.8882 26.6999 67.085 26.8475 67.2448 26.9507C67.4046 27.054 67.6407 27.1991 67.6407 27.1991L72.8022 16.3376C69.4038 16.5737 65.8678 16.8958 62.2432 17.3138L66.8858 26.6975L66.8882 26.6999Z" fill="#002855"/>
+            <path d="M110.396 2.65567H102.276C102.276 2.65567 104.059 4.05485 104.059 6.75485V8.20813C106.167 7.95731 108.284 7.70403 110.396 7.44829V2.65567Z" fill="#46B1EF"/>
+            <path d="M118.312 18.2311C118.312 19.5442 117.972 20.55 117.306 21.2163C116.637 21.8852 115.656 22.2221 114.387 22.2221C113.012 22.2221 111.994 21.8532 111.36 21.1254C110.721 20.3901 110.396 19.4163 110.396 18.2311V15.0786C108.284 15.1672 106.171 15.2434 104.059 15.3098V18.6024C104.059 20.0286 104.322 21.2877 104.841 22.35C105.36 23.4122 106.088 24.3098 107 25.0131C107.907 25.7139 108.997 26.245 110.236 26.5893C111.466 26.9311 112.818 27.1057 114.252 27.1057C115.575 27.1057 116.873 26.9336 118.115 26.5893C119.364 26.245 120.485 25.7163 121.447 25.018C122.416 24.3147 123.198 23.4221 123.775 22.3598C124.353 21.295 124.646 20.0336 124.646 18.6049V14.218C122.536 14.3926 120.424 14.5426 118.309 14.6729V18.2311H118.312Z" fill="#002855"/>
+            <path d="M124.648 2.65567H118.312V6.4819C120.448 6.21879 122.566 5.95321 124.648 5.6901V2.65567Z" fill="#46B1EF"/>
+            <path d="M77.9785 16.0352C78.1039 17.4762 78.4334 18.7967 78.972 19.9745C79.6703 21.509 80.681 22.8147 81.9744 23.8573C83.2629 24.8975 84.8416 25.7016 86.6662 26.2475C88.4834 26.7934 90.5539 27.0688 92.8187 27.0688C93.9424 27.0688 95.1449 27.0049 96.3941 26.8819C97.6359 26.759 98.8482 26.5918 99.999 26.3877L100.169 26.3581V16.0598H92.049C92.049 16.0598 93.8318 17.459 93.8318 20.159V22.2221H92.8875C91.4933 22.2221 90.2613 22.05 89.2285 21.7081C88.2006 21.3688 87.3375 20.877 86.6638 20.2475C85.99 19.618 85.4785 18.8311 85.1416 17.9065C84.9129 17.2795 84.7654 16.5762 84.6916 15.8163C82.69 15.8704 80.6933 15.9319 78.6965 16.0032C78.458 16.0131 78.2195 16.0254 77.9785 16.0377V16.0352Z" fill="#002855"/>
+            <path d="M69.1655 12.8778L68.1966 14.7885L67.3704 13.1876C61.4638 14.2278 55.5843 15.4057 49.7393 16.7311L50.8384 18.9393C53.922 18.4155 56.9835 17.9655 59.9958 17.5844L61.1663 15.1253L62.2483 17.3114C65.8704 16.8909 69.4089 16.5713 72.8073 16.3352L74.8975 11.936C72.9843 12.236 71.0737 12.5483 69.1679 12.8754L69.1655 12.8778Z" fill="#0070F0"/>
+            <path d="M124.648 5.69012C122.566 5.95324 120.448 6.21881 118.312 6.48193V14.6729C120.426 14.5426 122.539 14.3926 124.648 14.218V5.69012Z" fill="#0070F0"/>
+            <path d="M110.396 7.44829C108.284 7.70403 106.169 7.95731 104.059 8.20812V15.3122C106.171 15.2458 108.284 15.1696 110.396 15.0811V7.45075V7.44829Z" fill="#0070F0"/>
+            <path d="M85.1244 11.4442C85.2547 11.0754 85.4145 10.7336 85.594 10.409C83.1596 10.7237 80.7252 11.0655 78.2957 11.4221C78.0473 12.4426 77.9194 13.5393 77.9194 14.7098C77.9194 15.1622 77.9416 15.6049 77.9785 16.0352C78.217 16.0229 78.458 16.0131 78.6965 16.0008C80.6932 15.9295 82.6899 15.8704 84.6916 15.8139C84.6547 15.445 84.6301 15.0688 84.6301 14.6729C84.6301 13.4606 84.7973 12.3737 85.1268 11.4418L85.1244 11.4442Z" fill="#0070F0"/>
+            <path d="M99.4606 11.1098L99.8295 11.5942V8.70979C99.0377 8.80324 98.2459 8.89668 97.459 8.99012C98.1352 9.54832 98.8041 10.2516 99.4582 11.1098H99.4606Z" fill="#0070F0"/>
+            <path d="M91.1984 2.65569C89.0639 2.65569 87.382 2.84258 85.7074 3.44012C84.0328 4.03766 83.1254 4.46307 81.9033 5.51307C80.6787 6.56553 79.6975 7.87618 78.9893 9.40815C78.6992 10.0377 78.4705 10.709 78.2959 11.4196C80.7254 11.0606 83.1574 10.7213 85.5943 10.4065C85.8623 9.91471 86.1795 9.46471 86.5508 9.07864C87.1705 8.4393 87.9475 7.94749 88.8574 7.6229C89.7795 7.2934 90.8492 7.12618 92.0369 7.12618C93.4213 7.12618 94.7295 7.41635 95.927 7.98684C96.4385 8.23274 96.95 8.56962 97.4566 8.98766C98.2434 8.89421 99.0328 8.80077 99.827 8.70733V2.65077H91.1959L91.1984 2.65569Z" fill="#46B1EF"/>
+            <path d="M25.9455 13.35C27.5537 13.35 28.8594 14.6558 28.8594 16.2664C28.8594 17.8771 27.5537 19.1804 25.9455 19.1804C24.3373 19.1804 23.0315 17.8746 23.0315 16.2664C23.0315 14.6582 24.3348 13.35 25.9455 13.35ZM14.4815 16.2664C14.4815 14.6558 13.1758 13.35 11.5651 13.35C9.95448 13.35 8.6512 14.6558 8.6512 16.2664C8.6512 17.8771 9.95694 19.1804 11.5651 19.1804C13.1733 19.1804 14.4815 17.8746 14.4815 16.2664ZM35.6168 5.29676C35.6315 5.24512 35.575 5.20086 35.5282 5.22545C34.3651 5.82053 33.62 6.01725 32.72 5.99758C32.6635 5.99512 32.6463 5.92135 32.693 5.8943C34.8545 4.64266 37.0627 2.74676 37.3848 0.061516C37.3922 0.0123357 37.3332 -0.0196309 37.2938 0.00741829C33.1553 2.93857 29.7643 4.73365 25.2397 5.16889C25.2397 5.16889 22.3282 3.87299 18.7553 3.81889C15.1823 3.87299 12.2709 5.16889 12.2709 5.16889C7.74874 4.73365 4.35776 2.93857 0.219231 0.00741829C0.177428 -0.0196309 0.12087 0.0123357 0.125788 0.061516C0.450379 2.74676 2.65858 4.64266 4.81759 5.8943C4.86677 5.92135 4.8471 5.99512 4.79054 5.99758C3.89054 6.01725 3.14792 5.82053 1.9848 5.22545C1.93562 5.20086 1.87907 5.24758 1.89382 5.29922C3.07907 9.41315 7.28644 10.0697 11.8479 11.8574C15.6569 13.3525 17.8086 16.0451 18.5266 19.5271C18.6766 20.2623 18.7553 21.0345 18.7553 21.8361V25.355C18.7553 25.4041 18.6963 25.4263 18.6643 25.3894L15.834 22.232V19.9869C15.834 19.9377 15.7725 19.9156 15.7405 19.9525C14.5307 21.3148 12.7233 22.0673 10.6627 21.7623C8.58235 21.4525 6.84136 19.9673 6.24874 17.9484C5.55776 15.5951 6.37661 13.3697 7.96513 12.0222C7.99464 11.9976 7.98972 11.9533 7.9553 11.9386C6.77989 11.4123 5.43726 10.7976 4.48808 10.3402C4.46841 10.3304 4.44628 10.3353 4.43153 10.3525C3.1012 11.9558 2.30202 14.0164 2.30202 16.264C2.30202 21.3812 6.45038 25.5295 11.5676 25.5295C12.4135 25.5295 13.2766 25.4017 14.0561 25.1902L18.7184 29.9582C18.7381 29.9804 18.7725 29.9804 18.7946 29.9582L23.4545 25.1902C24.234 25.4017 25.0996 25.5295 25.9455 25.5295C31.0627 25.5295 35.211 21.3812 35.211 16.264C35.211 14.0164 34.4094 11.9558 33.0791 10.35C33.0643 10.3353 33.0446 10.3304 33.025 10.3377C32.0758 10.7976 30.7282 11.4123 29.5553 11.9386C29.5209 11.9533 29.5159 11.9976 29.543 12.0197C31.134 13.3673 31.9553 15.5951 31.2619 17.9484C30.6692 19.9673 28.9307 21.4525 26.8504 21.7623C24.7356 22.0771 22.8914 21.2755 21.6791 19.8468C21.2094 19.2836 20.816 18.6394 20.6315 17.8869C20.0881 15.6861 21.1258 14.4861 22.3455 13.5025C23.6143 12.4795 25.2225 11.9927 25.6455 11.8304C30.2143 10.0869 34.434 9.41316 35.6168 5.29676Z" fill="#002855"/>
+          </svg>
+        </span>
+
+        <!-- ── duplicate set for seamless loop ── -->
+
+        <span class="cert-chip cert-chip--aws" role="img" aria-label="Amazon Web Services">
+          <svg class="cert-logo" viewBox="0 0 72 30" fill="none" aria-hidden="true">
+            <text x="1" y="20" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="900" font-size="21" fill="#FF9900" letter-spacing="-0.5">aws</text>
+            <path d="M3 26 Q36 33 69 26" stroke="#FF9900" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <path d="M65 23 L69 26 L65 29" stroke="#FF9900" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+
+        <span class="cert-chip cert-chip--comptia" role="img" aria-label="CompTIA">
+          <svg class="cert-logo" viewBox="0 0 90 22" fill="none" aria-hidden="true">
+            <text x="1" y="16" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="700" font-size="15" fill="#C8102E">CompTIA</text>
+            <rect x="1" y="19" width="82" height="2" rx="1" fill="#C8102E" opacity="0.5"/>
+          </svg>
+        </span>
+
+        <span class="cert-chip cert-chip--cisco" role="img" aria-label="Cisco">
+          <svg class="cert-logo" viewBox="0 0 56 30" fill="none" aria-hidden="true">
+            <rect x="0"  y="5"  width="5" height="9"  rx="2.5" fill="#1BA0D7"/>
+            <rect x="8"  y="2"  width="5" height="15" rx="2.5" fill="#1BA0D7"/>
+            <rect x="16" y="5"  width="5" height="9"  rx="2.5" fill="#1BA0D7"/>
+            <rect x="24" y="2"  width="5" height="15" rx="2.5" fill="#1BA0D7"/>
+            <rect x="32" y="5"  width="5" height="9"  rx="2.5" fill="#1BA0D7"/>
+            <rect x="40" y="2"  width="5" height="15" rx="2.5" fill="#1BA0D7"/>
+            <text x="1" y="29" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#1BA0D7" letter-spacing="0.8">cisco</text>
+          </svg>
+        </span>
+
+        <span class="cert-chip cert-chip--juniper" role="img" aria-label="Juniper Networks">
+          <svg class="cert-logo" viewBox="0 0 24 24" fill="#84BD00" aria-hidden="true">
+            <path d="M23.0864 13.1643c.0456 0 .0717-.0132.0717-.062 0-.0482-.0254-.0593-.0731-.0593h-.1023v.1213zm-.1037.0417v.1285h-.0445v-.334h.1487c.0846 0 .1172.0347.1172.1006 0 .054-.0229.0912-.0806.102l.0755.1314h-.0484l-.0746-.1285zm.0746-.2918a.2535.2535 0 0 0-.2533.2531c0 .1395.1136.2532.2533.2532a.2535.2535 0 0 0 .253-.2532.2534.2534 0 0 0-.253-.2531zm-.291.2531a.2912.2912 0 0 1 .291-.2908.291.291 0 0 1 .2905.2908.291.291 0 0 1-.2905.2907.2912.2912 0 0 1-.291-.2907zm-20.7445-.6602V8.8304h-.4212v3.6767c0 .8506.0337 1.5332-1.4404 1.5332A4.029 4.029 0 0 1 0 14.0369v.397a6.215 6.215 0 0 0 .1602.0022c1.7858 0 1.8616-.8002 1.8616-1.929zm15.5404-1.6972h3.1334c-.042-.918-.1011-1.7014-1.4404-1.7014-1.2887 0-1.6425.6992-1.693 1.7014zm1.7016-2.0889c1.794 0 1.853 1.2045 1.8447 2.4764h-3.5548c.0085 1.1204.2863 1.9544 1.7436 1.9544.775 0 1.1288-.2107 1.5079-.4886l.2357.3116c-.421.3117-.918.556-1.7436.556-1.8194 0-2.1565-1.053-2.1565-2.4091 0-1.356.3877-2.4007 2.123-2.4007zm-4.1484 2.7055c.7439 0 1.1135-.3625 1.1135-1.0949 0-.7322-.3988-1.0798-1.132-1.0798h-1.7285v2.1747zM15.109 8.839c1.0678 0 1.5519.5307 1.5519 1.474 0 .9497-.478 1.527-1.5578 1.527h-1.7348v1.5981h-.4124V8.839zm-2.9253 0v4.5991h-.4122V8.839zm-1.1939 4.5991h-.4296v-2.8134c0-.8086.0084-1.491-1.474-1.491-1.4743 0-1.4405.6824-1.4405 1.5331v2.7713h-.4212v-2.7713c0-1.1288.076-1.9289 1.8616-1.9289 1.7943 0 1.9037.8001 1.9037 1.8952zM2.7466 8.8304h.4297v2.8134c0 .8088-.0084 1.491 1.474 1.491 1.4742 0 1.4405-.6822 1.4405-1.533V8.8303h.4212v2.7713c0 1.1289-.0759 1.929-1.8616 1.929-1.7943 0-1.9038-.8001-1.9038-1.8952zm18.9675 1.8364v2.7713h.421v-2.7713c0-.8507-.0336-1.533 1.4407-1.533.1579 0 .298.0083.4242.023v-.4012a4.8535 4.8535 0 0 0-.4242-.0177c-1.7859 0-1.8617.8001-1.8617 1.929z"/>
+          </svg>
+        </span>
+
+        <span class="cert-chip cert-chip--pmi" role="img" aria-label="Project Management Institute">
+          <!-- PMI icon mark: 4-quadrant logo — P letter, orange wave, blue diamond, purple triangles -->
+          <svg class="cert-logo" viewBox="0 0 63 66" fill="none" aria-hidden="true">
+            <path d="M22.493 49.002a7.5 7.5 0 0 1 7.495-7.503H30V34H0v7.499a7.499 7.499 0 0 1 7.499 7.499v.004A7.498 7.498 0 0 1 0 56.501V64h30v-7.5a7.498 7.498 0 0 1-7.507-7.49z" fill="#05bfe0"/>
+            <path d="M48 16.996C47.998 8.713 41.283 2 33 2v30c8.283 0 14.998-6.713 15-14.996C48.002 25.287 54.717 32 63 32V2c-8.283 0-14.998 6.713-15 14.996" fill="#ff610f"/>
+            <path d="M19.674 17H5.64V7.638h14.035a4.68 4.68 0 0 1 4.679 4.681A4.68 4.68 0 0 1 19.674 17zm.936-14.953A9.914 9.914 0 0 0 19.674 2H0v30h5.618v-9.362h14.056c.315 0 .625 0 .936-.047 5.667-.503 9.852-5.508 9.349-11.177A10.304 10.304 0 0 0 20.61 2.06z" fill="#231f20"/>
+            <path d="M32 64v-9l9 9zM49.621 64L33 47.376V39l25 25zM63 34v9l-9-9zM62 59L37 34h8.405L62 50.593z" fill="#4f17a8"/>
+          </svg>
+        </span>
+
+        <span class="cert-chip cert-chip--lpi" role="img" aria-label="Linux Professional Institute">
+          <svg class="cert-logo" viewBox="0 0 24 24" fill="#FFB300" aria-hidden="true">
+            <path d="M12-.0002c-6.6273 0-12 5.3728-12 11.9997 0 6.627 5.3727 12.0007 12 12.0007s12-5.3728 12-12.0007S18.627-.0002 12-.0002Zm0 20.987c-4.9632 0-8.987-4.0231-8.987-8.9866 0-4.9635 4.0238-8.9867 8.987-8.9867 4.9632 0 8.987 4.0235 8.987 8.9867 0 4.9631-4.0238 8.9867-8.987 8.9867zm5.1043-3.0031.7995-2.9975h-7.1631L13.5062 4.495h-2.9978L6.9118 17.9837Zm.2896-10.4938c0 .8225-.6697 1.4938-1.4938 1.4938s-1.4897-.6716-1.4897-1.4938c0-.8223.6675-1.4907 1.4897-1.4907s1.4938.6688 1.4938 1.4907"/>
+          </svg>
+        </span>
+
+        <span class="cert-chip cert-chip--wgu" role="img" aria-label="Western Governors University">
+          <!-- Official WGU logo: compass rose mark + W G U letterforms -->
+          <svg class="cert-logo" viewBox="0 0 133 30" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M61.9211 2.65569H54.1752C54.1752 2.65569 55.0727 3.47454 55.6407 4.33765C56.2088 5.20077 56.6932 6.08355 57.1801 7.08437L58.7563 10.2688L56.1916 15.2409L49.6973 2.65569H41.5776C41.5776 2.65569 42.4481 3.32946 43.2326 4.29831C43.9432 5.17372 44.4375 6.08355 44.9268 7.08191L49.7342 16.7311C55.5793 15.4057 61.4612 14.2278 67.3653 13.1877L61.9186 2.65569H61.9211Z" fill="#46B1EF"/>
+            <path d="M79.3065 2.65567H74.3516L69.1655 12.8778C71.0737 12.5508 72.9844 12.236 74.895 11.9385L79.3065 2.65567Z" fill="#46B1EF"/>
+            <path d="M54.7015 26.6975C54.7015 26.6975 54.7851 26.7712 55.0285 26.9483C55.272 27.1253 55.4171 27.209 55.4171 27.209L59.9958 17.5868C56.9835 17.9655 53.9195 18.4155 50.8384 18.9417L54.7039 26.6975H54.7015Z" fill="#002855"/>
+            <path d="M66.8882 26.6999C66.8882 26.6999 67.085 26.8475 67.2448 26.9507C67.4046 27.054 67.6407 27.1991 67.6407 27.1991L72.8022 16.3376C69.4038 16.5737 65.8678 16.8958 62.2432 17.3138L66.8858 26.6975L66.8882 26.6999Z" fill="#002855"/>
+            <path d="M110.396 2.65567H102.276C102.276 2.65567 104.059 4.05485 104.059 6.75485V8.20813C106.167 7.95731 108.284 7.70403 110.396 7.44829V2.65567Z" fill="#46B1EF"/>
+            <path d="M118.312 18.2311C118.312 19.5442 117.972 20.55 117.306 21.2163C116.637 21.8852 115.656 22.2221 114.387 22.2221C113.012 22.2221 111.994 21.8532 111.36 21.1254C110.721 20.3901 110.396 19.4163 110.396 18.2311V15.0786C108.284 15.1672 106.171 15.2434 104.059 15.3098V18.6024C104.059 20.0286 104.322 21.2877 104.841 22.35C105.36 23.4122 106.088 24.3098 107 25.0131C107.907 25.7139 108.997 26.245 110.236 26.5893C111.466 26.9311 112.818 27.1057 114.252 27.1057C115.575 27.1057 116.873 26.9336 118.115 26.5893C119.364 26.245 120.485 25.7163 121.447 25.018C122.416 24.3147 123.198 23.4221 123.775 22.3598C124.353 21.295 124.646 20.0336 124.646 18.6049V14.218C122.536 14.3926 120.424 14.5426 118.309 14.6729V18.2311H118.312Z" fill="#002855"/>
+            <path d="M124.648 2.65567H118.312V6.4819C120.448 6.21879 122.566 5.95321 124.648 5.6901V2.65567Z" fill="#46B1EF"/>
+            <path d="M77.9785 16.0352C78.1039 17.4762 78.4334 18.7967 78.972 19.9745C79.6703 21.509 80.681 22.8147 81.9744 23.8573C83.2629 24.8975 84.8416 25.7016 86.6662 26.2475C88.4834 26.7934 90.5539 27.0688 92.8187 27.0688C93.9424 27.0688 95.1449 27.0049 96.3941 26.8819C97.6359 26.759 98.8482 26.5918 99.999 26.3877L100.169 26.3581V16.0598H92.049C92.049 16.0598 93.8318 17.459 93.8318 20.159V22.2221H92.8875C91.4933 22.2221 90.2613 22.05 89.2285 21.7081C88.2006 21.3688 87.3375 20.877 86.6638 20.2475C85.99 19.618 85.4785 18.8311 85.1416 17.9065C84.9129 17.2795 84.7654 16.5762 84.6916 15.8163C82.69 15.8704 80.6933 15.9319 78.6965 16.0032C78.458 16.0131 78.2195 16.0254 77.9785 16.0377V16.0352Z" fill="#002855"/>
+            <path d="M69.1655 12.8778L68.1966 14.7885L67.3704 13.1876C61.4638 14.2278 55.5843 15.4057 49.7393 16.7311L50.8384 18.9393C53.922 18.4155 56.9835 17.9655 59.9958 17.5844L61.1663 15.1253L62.2483 17.3114C65.8704 16.8909 69.4089 16.5713 72.8073 16.3352L74.8975 11.936C72.9843 12.236 71.0737 12.5483 69.1679 12.8754L69.1655 12.8778Z" fill="#0070F0"/>
+            <path d="M124.648 5.69012C122.566 5.95324 120.448 6.21881 118.312 6.48193V14.6729C120.426 14.5426 122.539 14.3926 124.648 14.218V5.69012Z" fill="#0070F0"/>
+            <path d="M110.396 7.44829C108.284 7.70403 106.169 7.95731 104.059 8.20812V15.3122C106.171 15.2458 108.284 15.1696 110.396 15.0811V7.45075V7.44829Z" fill="#0070F0"/>
+            <path d="M85.1244 11.4442C85.2547 11.0754 85.4145 10.7336 85.594 10.409C83.1596 10.7237 80.7252 11.0655 78.2957 11.4221C78.0473 12.4426 77.9194 13.5393 77.9194 14.7098C77.9194 15.1622 77.9416 15.6049 77.9785 16.0352C78.217 16.0229 78.458 16.0131 78.6965 16.0008C80.6932 15.9295 82.6899 15.8704 84.6916 15.8139C84.6547 15.445 84.6301 15.0688 84.6301 14.6729C84.6301 13.4606 84.7973 12.3737 85.1268 11.4418L85.1244 11.4442Z" fill="#0070F0"/>
+            <path d="M99.4606 11.1098L99.8295 11.5942V8.70979C99.0377 8.80324 98.2459 8.89668 97.459 8.99012C98.1352 9.54832 98.8041 10.2516 99.4582 11.1098H99.4606Z" fill="#0070F0"/>
+            <path d="M91.1984 2.65569C89.0639 2.65569 87.382 2.84258 85.7074 3.44012C84.0328 4.03766 83.1254 4.46307 81.9033 5.51307C80.6787 6.56553 79.6975 7.87618 78.9893 9.40815C78.6992 10.0377 78.4705 10.709 78.2959 11.4196C80.7254 11.0606 83.1574 10.7213 85.5943 10.4065C85.8623 9.91471 86.1795 9.46471 86.5508 9.07864C87.1705 8.4393 87.9475 7.94749 88.8574 7.6229C89.7795 7.2934 90.8492 7.12618 92.0369 7.12618C93.4213 7.12618 94.7295 7.41635 95.927 7.98684C96.4385 8.23274 96.95 8.56962 97.4566 8.98766C98.2434 8.89421 99.0328 8.80077 99.827 8.70733V2.65077H91.1959L91.1984 2.65569Z" fill="#46B1EF"/>
+            <path d="M25.9455 13.35C27.5537 13.35 28.8594 14.6558 28.8594 16.2664C28.8594 17.8771 27.5537 19.1804 25.9455 19.1804C24.3373 19.1804 23.0315 17.8746 23.0315 16.2664C23.0315 14.6582 24.3348 13.35 25.9455 13.35ZM14.4815 16.2664C14.4815 14.6558 13.1758 13.35 11.5651 13.35C9.95448 13.35 8.6512 14.6558 8.6512 16.2664C8.6512 17.8771 9.95694 19.1804 11.5651 19.1804C13.1733 19.1804 14.4815 17.8746 14.4815 16.2664ZM35.6168 5.29676C35.6315 5.24512 35.575 5.20086 35.5282 5.22545C34.3651 5.82053 33.62 6.01725 32.72 5.99758C32.6635 5.99512 32.6463 5.92135 32.693 5.8943C34.8545 4.64266 37.0627 2.74676 37.3848 0.061516C37.3922 0.0123357 37.3332 -0.0196309 37.2938 0.00741829C33.1553 2.93857 29.7643 4.73365 25.2397 5.16889C25.2397 5.16889 22.3282 3.87299 18.7553 3.81889C15.1823 3.87299 12.2709 5.16889 12.2709 5.16889C7.74874 4.73365 4.35776 2.93857 0.219231 0.00741829C0.177428 -0.0196309 0.12087 0.0123357 0.125788 0.061516C0.450379 2.74676 2.65858 4.64266 4.81759 5.8943C4.86677 5.92135 4.8471 5.99512 4.79054 5.99758C3.89054 6.01725 3.14792 5.82053 1.9848 5.22545C1.93562 5.20086 1.87907 5.24758 1.89382 5.29922C3.07907 9.41315 7.28644 10.0697 11.8479 11.8574C15.6569 13.3525 17.8086 16.0451 18.5266 19.5271C18.6766 20.2623 18.7553 21.0345 18.7553 21.8361V25.355C18.7553 25.4041 18.6963 25.4263 18.6643 25.3894L15.834 22.232V19.9869C15.834 19.9377 15.7725 19.9156 15.7405 19.9525C14.5307 21.3148 12.7233 22.0673 10.6627 21.7623C8.58235 21.4525 6.84136 19.9673 6.24874 17.9484C5.55776 15.5951 6.37661 13.3697 7.96513 12.0222C7.99464 11.9976 7.98972 11.9533 7.9553 11.9386C6.77989 11.4123 5.43726 10.7976 4.48808 10.3402C4.46841 10.3304 4.44628 10.3353 4.43153 10.3525C3.1012 11.9558 2.30202 14.0164 2.30202 16.264C2.30202 21.3812 6.45038 25.5295 11.5676 25.5295C12.4135 25.5295 13.2766 25.4017 14.0561 25.1902L18.7184 29.9582C18.7381 29.9804 18.7725 29.9804 18.7946 29.9582L23.4545 25.1902C24.234 25.4017 25.0996 25.5295 25.9455 25.5295C31.0627 25.5295 35.211 21.3812 35.211 16.264C35.211 14.0164 34.4094 11.9558 33.0791 10.35C33.0643 10.3353 33.0446 10.3304 33.025 10.3377C32.0758 10.7976 30.7282 11.4123 29.5553 11.9386C29.5209 11.9533 29.5159 11.9976 29.543 12.0197C31.134 13.3673 31.9553 15.5951 31.2619 17.9484C30.6692 19.9673 28.9307 21.4525 26.8504 21.7623C24.7356 22.0771 22.8914 21.2755 21.6791 19.8468C21.2094 19.2836 20.816 18.6394 20.6315 17.8869C20.0881 15.6861 21.1258 14.4861 22.3455 13.5025C23.6143 12.4795 25.2225 11.9927 25.6455 11.8304C30.2143 10.0869 34.434 9.41316 35.6168 5.29676Z" fill="#002855"/>
+          </svg>
+        </span>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── About ─────────────────────────────────────────────── -->
+  <section id="about" class="section section--alt">
+    <div class="container">
+      <p class="section-label reveal">· BACKGROUND</p>
+      <h2 class="section-heading reveal">About Ben</h2>
+
+      <div class="about__body">
+        <div class="about__text">
+          <p class="about__para reveal">
+            I spent over a decade as a master electrician. At 35, I decided I wasn't done growing.
+            No computer science background, no tech degree — just drive. I got my CompTIA A+,
+            Network+, and Security+ from scratch, cold-messaged data center techs on LinkedIn
+            asking for advice, and landed my first role at ByteDance in May 2024.
+          </p>
+          <p class="about__para reveal">
+            Since then: a federal NOC at the FDA, a WAN service provider supporting government
+            and military networks, a B.S. in Network Engineering, and 13+ certifications —
+            all in under two years. I built an entire NOC operations team from nothing:
+            staffing models, SOPs, SolarWinds, ServiceNow, training 17 people with zero
+            prior operations experience.
+          </p>
+          <p class="about__para reveal">
+            I'm not the fastest to learn something new. What I have is drive — I study harder,
+            work longer, and care more than most people in this field. That's not a claim.
+            It's a track record.
+          </p>
+        </div>
+
+        <aside class="about__certs reveal">
+          <p class="about__certs-heading">Certifications</p>
+          <ul class="about__cert-list">
+            <li>AWS Advanced Networking Specialty <span class="cert-status cert-status--progress">In Progress</span></li>
+            <li>AWS SysOps Administrator – Associate</li>
+            <li>AWS Solutions Architect – Associate</li>
+            <li>AWS Certified Cloud Practitioner</li>
+            <li>AWS Cloud Operations</li>
+            <li>Project Management Professional (PMP)</li>
+            <li>JNCIS-SP</li>
+            <li>JNCIA</li>
+            <li>CCNA</li>
+            <li>CompTIA Security+</li>
+            <li>CompTIA Cloud+</li>
+            <li>CompTIA Network+</li>
+            <li>CompTIA A+</li>
+            <li>LPI Linux Essentials</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Skills ────────────────────────────────────────────── -->
+  <section id="skills" class="section">
+    <div class="container">
+      <p class="section-label reveal">· SKILLS</p>
+      <h2 class="section-heading reveal">Technical Expertise</h2>
+
+      <div class="skills-grid">
+
+        <div class="card reveal">
+          <h3 class="card__title">Cloud / AWS</h3>
+          <div class="tag-list">
+            <span class="tag">Transit Gateway</span>
+            <span class="tag">Direct Connect</span>
+            <span class="tag">Route 53</span>
+            <span class="tag">VPC</span>
+            <span class="tag">IAM</span>
+            <span class="tag">Lambda</span>
+            <span class="tag">API Gateway</span>
+            <span class="tag">DynamoDB</span>
+            <span class="tag">S3</span>
+            <span class="tag">CloudFront</span>
+            <span class="tag">ACM</span>
+            <span class="tag">SAM</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <h3 class="card__title">Routing &amp; Protocols</h3>
+          <div class="tag-list">
+            <span class="tag">BGP</span>
+            <span class="tag">OSPF</span>
+            <span class="tag">LDP</span>
+            <span class="tag">MPLS L3VPN</span>
+            <span class="tag">VPNv4</span>
+            <span class="tag">VRF</span>
+            <span class="tag">EVPN/VXLAN</span>
+            <span class="tag">Symmetric IRB</span>
+            <span class="tag">IPsec / IKEv2</span>
+            <span class="tag">Site-to-Site VPN</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <h3 class="card__title">Platforms</h3>
+          <div class="tag-list">
+            <span class="tag">Juniper SRX</span>
+            <span class="tag">Juniper EX</span>
+            <span class="tag">vMX</span>
+            <span class="tag">Cisco IOS-XE</span>
+            <span class="tag">DNA Center</span>
+            <span class="tag">Arista</span>
+            <span class="tag">Ciena</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <h3 class="card__title">Automation &amp; IaC</h3>
+          <div class="tag-list">
+            <span class="tag">Terraform</span>
+            <span class="tag">Python</span>
+            <span class="tag">Bash</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">CI/CD</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <h3 class="card__title">Systems &amp; Tools</h3>
+          <div class="tag-list">
+            <span class="tag">Linux (RHEL / Ubuntu)</span>
+            <span class="tag">SolarWinds</span>
+            <span class="tag">ServiceNow</span>
+            <span class="tag">Infoblox</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">OTDR / Optical Testing</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Experience ────────────────────────────────────────── -->
+  <section id="experience" class="section section--alt">
+    <div class="container">
+      <p class="section-label reveal">· EXPERIENCE</p>
+      <h2 class="section-heading reveal">Work History</h2>
+
+      <div class="exp-list">
+
+        <!-- Visionary Solutions -->
+        <article class="exp-card reveal">
+          <div class="exp-card__meta">
+            <div class="exp-badge exp-badge--blue">VS</div>
+            <div>
+              <p class="exp-card__role">Network Engineer / Operations Lead</p>
+              <p class="exp-card__company">Visionary Solutions</p>
+            </div>
+            <span class="exp-card__date">Apr 2025 – Present</span>
+          </div>
+          <ul class="exp-card__bullets">
+            <li>Architected and deployed an AWS out-of-band management solution using Transit Gateway with BGP over IPsec, providing centralized remote access to distributed sites via redundant virtual router instances across multiple AZs — fully provisioned in Terraform.</li>
+            <li>Operated MPLS L3VPN transport infrastructure for multi-tenant customer environments, supporting per-customer BGP peering and VRF isolation over hosted Direct Connect.</li>
+            <li>Designed and built a hybrid DNS solution using Route 53 Resolver Inbound/Outbound Endpoints with forwarding rules for bidirectional resolution between on-prem and AWS.</li>
+          </ul>
+        </article>
+
+        <!-- FDA -->
+        <article class="exp-card reveal">
+          <div class="exp-card__meta">
+            <div class="exp-badge exp-badge--red">FDA</div>
+            <div>
+              <p class="exp-card__role">Senior NOC Engineer</p>
+              <p class="exp-card__company">Food and Drug Administration</p>
+            </div>
+            <span class="exp-card__date">Nov 2024 – Apr 2025</span>
+          </div>
+          <ul class="exp-card__bullets">
+            <li>Monitored and maintained enterprise federal network infrastructure, triaging and resolving outages across production environments supporting agency operations.</li>
+            <li>Built a 17-person NOC operations team from zero — staffing models, SOPs, SolarWinds and ServiceNow workflows, and training staff with no prior NOC experience.</li>
+            <li>Performed routine configuration management and change execution across Cisco and Juniper network devices within a hardened federal environment.</li>
+          </ul>
+        </article>
+
+        <!-- ByteDance -->
+        <article class="exp-card reveal">
+          <div class="exp-card__meta">
+            <div class="exp-badge exp-badge--teal">BD</div>
+            <div>
+              <p class="exp-card__role">Network Operations Lead</p>
+              <p class="exp-card__company">ByteDance</p>
+            </div>
+            <span class="exp-card__date">May 2024 – Nov 2024</span>
+          </div>
+          <ul class="exp-card__bullets">
+            <li>Provisioned and managed cross-connects between ByteDance data centers and cloud providers (AWS, GCP, Azure, Oracle) for cloud on-ramp physical interconnect.</li>
+            <li>Led end-to-end network deployment for new POP and data center sites, including Cisco, Ciena, and Arista hardware from rack to live.</li>
+            <li>Developed Bash automation for Linux server health monitoring (CPU, memory, disk) across data center infrastructure.</li>
+          </ul>
+        </article>
+
+        <!-- Electrician -->
+        <article class="exp-card reveal">
+          <div class="exp-card__meta">
+            <div class="exp-badge exp-badge--amber">ME</div>
+            <div>
+              <p class="exp-card__role">Master Electrician</p>
+              <p class="exp-card__company">Independent Contractor</p>
+            </div>
+            <span class="exp-card__date">2015 – May 2024</span>
+          </div>
+          <ul class="exp-card__bullets">
+            <li>Designed and installed structured cabling infrastructure across commercial and data center environments, including fiber, copper, patch panels, and cable trays.</li>
+            <li>Installed and maintained power distribution systems, UPS infrastructure, and grounding for data center physical plant builds.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Projects ──────────────────────────────────────────── -->
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="section-label reveal">· PROJECTS</p>
+      <h2 class="section-heading reveal">Selected Work</h2>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-card__header">
+            <h3 class="project-card__title">Hosted Direct Connect Lab</h3>
+            <a href="#" class="project-card__link" aria-label="View on GitHub">→</a>
+          </div>
+          <p class="project-card__desc">
+            Multi-tenant hosted Direct Connect environment simulating a service provider edge router
+            colocated in a Direct Connect facility. Per-customer BGP peering, hosted VIF provisioning
+            to discrete AWS accounts, and Direct Connect Gateway with Transit Gateway association.
+          </p>
+          <div class="tag-list">
+            <span class="tag tag--accent">Terraform</span>
+            <span class="tag tag--accent">AWS Direct Connect</span>
+            <span class="tag tag--accent">Transit Gateway</span>
+            <span class="tag tag--accent">BGP</span>
+            <span class="tag tag--accent">EVE-NG</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__header">
+            <h3 class="project-card__title">Cloud Resume Challenge</h3>
+            <a href="#" class="project-card__link" aria-label="View blog post">→</a>
+          </div>
+          <p class="project-card__desc">
+            Full-stack serverless application on AWS: S3 static hosting, CloudFront, Route 53, ACM,
+            API Gateway, Lambda (Python/boto3), and DynamoDB. Infrastructure provisioned with
+            Terraform via a GitHub Actions CI/CD pipeline.
+          </p>
+          <div class="tag-list">
+            <span class="tag tag--accent">Terraform</span>
+            <span class="tag tag--accent">Lambda</span>
+            <span class="tag tag--accent">DynamoDB</span>
+            <span class="tag tag--accent">CloudFront</span>
+            <span class="tag tag--accent">GitHub Actions</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__header">
+            <h3 class="project-card__title">BGP EVPN/VXLAN Spine-Leaf Fabric</h3>
+            <a href="#" class="project-card__link" aria-label="View on GitHub">→</a>
+          </div>
+          <p class="project-card__desc">
+            12-node BGP EVPN/VXLAN spine-leaf datacenter fabric in EVE-NG using Juniper vEX and vSRX.
+            Symmetric IRB for distributed gateway functionality, eBGP underlay with iBGP EVPN overlay.
+          </p>
+          <div class="tag-list">
+            <span class="tag tag--accent">Juniper vEX</span>
+            <span class="tag tag--accent">EVPN/VXLAN</span>
+            <span class="tag tag--accent">Symmetric IRB</span>
+            <span class="tag tag--accent">EVE-NG</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Education ─────────────────────────────────────────── -->
+  <section id="education" class="section section--alt">
+    <div class="container">
+      <p class="section-label reveal">· EDUCATION</p>
+      <h2 class="section-heading reveal">Academic Background</h2>
+
+      <div class="edu-list">
+
+        <div class="edu-item reveal">
+          <div class="edu-item__left">
+            <p class="edu-item__degree">MBA – IT Management</p>
+            <p class="edu-item__school">Western Governors University</p>
+          </div>
+          <span class="edu-item__date">Expected Dec 2026</span>
+        </div>
+
+        <div class="edu-item reveal">
+          <div class="edu-item__left">
+            <p class="edu-item__degree">B.S., Network Engineering and Security</p>
+            <p class="edu-item__school">Western Governors University</p>
+          </div>
+          <span class="edu-item__date">Feb 2025</span>
+        </div>
+
+        <div class="edu-item reveal">
+          <div class="edu-item__left">
+            <p class="edu-item__degree">CS50 – Introduction to Computer Science</p>
+            <p class="edu-item__school">Harvard University</p>
+          </div>
+          <span class="edu-item__date">Jan 2025</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/benjaminzimmerman1/" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="https://github.com/benzimmerman" target="_blank" rel="noopener" aria-label="GitHub" class="footer__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </a>
+      </div>
+      <p class="footer__credit">Built with HTML, CSS &amp; JS · AWS</p>
+      <p class="footer__visitors">
+        Visitors: <span id="visitor-count">—</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
