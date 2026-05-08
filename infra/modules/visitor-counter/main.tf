@@ -101,7 +101,13 @@ resource "aws_lambda_function" "db_update_fn" {
   handler                        = "db_update_fn.lambda_handler" # The handler is the entry point for the Lambda function, in the format "file_name.function_name"
   code_sha256                    = data.archive_file.db_update_fn.output_base64sha256
   runtime                        = "python3.12"
-  reserved_concurrent_executions = 5
+  reserved_concurrent_executions = 10
+
+  environment {
+    variables = {
+      TABLE_NAME = aws_dynamodb_table.visitor_count_table.name
+    }
+  }
 
   depends_on = [aws_cloudwatch_log_group.db_update_fn]
 
