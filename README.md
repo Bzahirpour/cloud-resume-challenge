@@ -60,7 +60,7 @@ cloud-resume-challenge/
 
 ### Modules + Envs Pattern
 
-Resources live exclusively in `infra/modules/`. Environment directories (`infra/envs/dev/`, `infra/envs/prod/`) are thin composition layers — they call modules with environment-specific values and nothing else. This enforces a clean separation between *what* gets built (modules) and *where* it gets built (envs).
+Resources live exclusively in `infra/modules/`. Environment directories (`infra/envs/dev/`, `infra/envs/prod/`) are thin composition layers they call modules with environment-specific values and nothing else. This enforces a clean separation between *what* gets built (modules) and *where* it gets built (envs).
 
 ```hcl
 # infra/envs/dev/main.tf
@@ -82,12 +82,12 @@ module "visitor_counter" {
 
 - Remote state stored in S3: `cloud-resume-challenge-tfstate-{account_id}`
 - State keys scoped per environment: `envs/dev/terraform.tfstate`, `envs/prod/terraform.tfstate`
-- Native S3 locking (`use_lockfile = true`) — no DynamoDB lock table required
+- Native S3 locking (`use_lockfile = true`) no DynamoDB lock table required
 - Lock timeout set to 120s in CI to handle concurrent runs
 
 ### OIDC Authentication
 
-GitHub Actions authenticates to AWS via OIDC federation — no IAM users, no access keys stored in secrets. The trust policy scopes permissions to specific workflow contexts:
+GitHub Actions authenticates to AWS via OIDC federation no IAM users, no access keys stored in secrets. The trust policy scopes permissions to specific workflow contexts:
 
 | GitHub Actions context | OIDC subject claim |
 |---|---|
@@ -131,7 +131,7 @@ Merge to main
         └── apply: prod  (held for manual reviewer approval — environment: prod OIDC sub)
 ```
 
-Plan output for both environments is posted as a collapsible comment on every PR. Reviewers are expected to read both plans before approving — especially prod, where a destroy is a red flag.
+Plan output for both environments is posted as a collapsible comment on every PR. Reviewers are expected to read both plans before approving especially prod, where a destroy is a red flag.
 
 ### Frontend Pipeline (`frontend.yml`)
 

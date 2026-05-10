@@ -6,7 +6,7 @@ One-time setup that creates the foundational resources the CI/CD pipeline depend
 - GitHub Actions OIDC provider in IAM
 - IAM role assumed by GitHub Actions via OIDC, scoped to this repo and specific events/environments
 
-This config uses **local state** by design. It avoids the chicken-and-egg problem of CI managing the resources CI depends on, and keeps teardown simple — `terraform destroy` from this directory wipes everything cleanly with no state migration dance.
+This config uses **local state** by design. It avoids the chicken-and-egg problem of CI managing the resources CI depends on, and keeps teardown simple `terraform destroy` from this directory wipes everything cleanly with no state migration dance.
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ When a workflow job specifies an `environment`, the OIDC token's `sub` claim ref
 
 ## Permissions
 
-The role currently has `AdministratorAccess` attached. This is a **deliberate first-pass tradeoff** for development velocity. The production-grade pattern is three separate roles (plan, dev, prod) with resource-scoped policies — see the inline `TODO` in `main.tf`.
+The role currently has `AdministratorAccess` attached. This is a **deliberate first-pass tradeoff** for development velocity. The production-grade pattern is three separate roles (plan, dev, prod) with resource-scoped policies see the inline `TODO` in `main.tf`.
 
 ## Teardown
 
